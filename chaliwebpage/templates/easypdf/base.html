@@ -1,0 +1,13 @@
+{%% extends "easy_pdf/base.html"%}
+
+{%block content%}
+#fetching model data
+<h1>UserProfile :{{UserProfile}}<h1>
+    <p>first_name :{{UserProfile.first_name}}<p>
+    <p>last_name :{{UserProfile.last_name}}<p>
+
+{%end block%}
+
+# create a link for downloading or previewing the easy_pdf
+
+<a href="{% url'UseProfile-pdf-detail' pk=UserProfile.pk%}">Download PDF</a>
