@@ -16,3 +16,6 @@ def user_profile(request):
         form = UserProfileForm()
 
     return render(request, 'user_profile.html', {'form': form})
+
+def success(request):
+    return render(request, 'success.html')
