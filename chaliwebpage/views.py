@@ -22,4 +22,4 @@ def success(request):
     return render(request, 'success.html')
 
 def user_profile_url():
-    return reverse('user_profile')
+    return reverse('chaliweb:user_profile')
