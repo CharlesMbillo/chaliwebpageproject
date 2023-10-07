@@ -1,7 +1,7 @@
 #from django.shortcuts import render
 
 # chaliwebpage/views.py
-from django.shortcuts import render, redirect
+from django.shortcuts import render, reverse, redirect
 from .forms import UserProfileForm
 #from django.views.generic.detail import DetailView
 #from easy_pdf.views import PDFTemplateResponseMixin
@@ -11,7 +11,7 @@ def user_profile(request):
         form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success')  # Redirect to a success page after submission
+            return redirect(reverse('success'))  # Redirect to a success page after submission
     else:
         form = UserProfileForm()
 
