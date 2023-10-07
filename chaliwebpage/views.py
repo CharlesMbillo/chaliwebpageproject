@@ -1,7 +1,8 @@
 #from django.shortcuts import render
 
 # chaliwebpage/views.py
-from django.shortcuts import render, reverse, redirect
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from .forms import UserProfileForm
 #from django.views.generic.detail import DetailView
 #from easy_pdf.views import PDFTemplateResponseMixin
@@ -19,3 +20,6 @@ def user_profile(request):
 
 def success(request):
     return render(request, 'success.html')
+
+def user_profile_url():
+    return reverse('user_profile')
