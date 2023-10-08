@@ -1,7 +1,7 @@
 <!-- chaliwebpage/templates/user_profile.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'user_profile' %}">Home</a>
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit">
+        <a href="{% url 'user_profile' %}">Home</a>        
     </form>
 </body>
 </html>
