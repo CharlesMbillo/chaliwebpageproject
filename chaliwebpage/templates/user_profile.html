@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ChaliWebPage User Profile</title>
-</head>
+    <meta charset="UTF-12"> </head>
 <body>
-    <h1>Chali Web Page User Profile Form</h1>
+    <h1>Chali Web Page </h1>
+    <h2> User Profile Form</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_p}}
         <input type="submit" value="Submit">    
     </form>
+    <h5> @ copyright 2023</h5>
 </body>
 </html>
 
@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chali Web Page User Data Form</h1>
+    <h1>Chali Web Page</h1>
+    <h2>User Data Form</h2>
     <form method="POST" action="">
         {% csrf_token %}
-        {{ form.as_p }}
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" value="{{ first_name }}">
         <label for="last_name">Last Name:</label>
@@ -46,6 +46,7 @@
             </ul>
         {% endif %}
     </form>
+    <h5> @ copyright 2023</h5>
 </body>
 </html>
 
