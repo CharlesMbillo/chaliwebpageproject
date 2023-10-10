@@ -14,3 +14,35 @@
     </form>
 </body>
 </html>
+
+<!-- Define the HTML template for the web page -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>User Data Form</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" value="{{ first_name }}">
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" value="{{ last_name }}">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" value="{{ phone_number }}">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ email }}">
+        <button type="submit">Submit</button>
+        {% if errors %}
+            <ul class="error">
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </form>
+</body>
+</html>
+
