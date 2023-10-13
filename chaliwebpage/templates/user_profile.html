@@ -1,19 +1,31 @@
 <!-- chaliwebpage/templates/user_profile.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-12"> </head>
-<body>
-    <h1>Chali Web Page </h1>
-    <h2> User Profile Form</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p}}
-        <input type="submit" value="Submit">    
-    </form>
-    <h5> @ copyright 2023</h5>
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This webpage accepts and validates user data"> 
+        <title>Chali WebPage</title>
+    </head>
+    <body style="background-color: lightblue;">
+        <h1 style="color: blue;">Chali WebPage </h1>
+        <hr/>
+        <h2 style="color: red;background-color: blue;"> User Profile Form</h2>
+        <section 1>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" value="Submit"; style="background-color:whitesmoke">    
+            </form>
+                <aside>(...A Django-Mysql WebPage that collects and validates user input...)  </aside>
+        </section 1>
+        <hr/>
+        <iframe src="https://crystalrivers.co.ke"width=1300 height=300> Sorry</iframe>
+    </body>
+        <footer>
+        <h5> Github:https://github.com/CharlesMbillo/chaliwebproject.git @ Copyright 2023</h5>
+        </footer>
+        <hr/>
+    </html>
 
 
 
@@ -21,22 +33,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ChaliWebPage User Data Form</title>
+    <title>Chali WebPage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chali Web Page</h1>
+    <h1>Chali WebPage</h1>
     <h2>User Data Form</h2>
     <form method="POST" action="">
         {% csrf_token %}
         <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" value="{{ first_name }}">
+        <input type="text" id="first_name" name="first_name" value="{{ first_name }}Enter First Name">
         <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" value="{{ last_name }}">
+        <input type="text" id="last_name" name="last_name" value="{{ last_name }}Type Last Name">
         <label for="phone_number">Phone Number:</label>
-        <input type="text" id="phone_number" name="phone_number" value="{{ phone_number }}">
+        <input type="text" id="phone_number" name="phone_number" value="{{ phone_number }}Type Phone Number">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{ email }}">
+        <input type="email" id="email" name="email" value="{{ email }}Type Valid Email"style="color:red;">
         <button type="submit">Submit</button>
         {% if errors %}
             <ul class="error">
@@ -46,7 +58,9 @@
             </ul>
         {% endif %}
     </form>
-    <h5> @ copyright 2023</h5>
+    <hr/>
+    <h5 style="background-color: whitesmoke;"> Github:https://github.com/CharlesMbillo/chaliwebproject.git @ Copyright 2023</h5>
+    <hr/>
 </body>
 </html>
 
