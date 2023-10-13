@@ -42,13 +42,13 @@
     <form method="POST" action="">
         {% csrf_token %}
         <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" value="{{ first_name }}Enter First Name">
+        <input autocomplete="off" autofocus type="text" id="first_name" name="first_name" value="{{ first_name }}">
         <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" value="{{ last_name }}Type Last Name">
+        <input autocomplete="off" autofocus type="text" id="last_name" name="last_name" value="{{ last_name }}">
         <label for="phone_number">Phone Number:</label>
-        <input type="text" id="phone_number" name="phone_number" value="{{ phone_number }}Type Phone Number">
+        <input autocomplete="off" autofocus type="text" id="phone_number" name="phone_number" value="{{ phone_number }}">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{ email }}Type Valid Email"style="color:red;">
+        <input autocomplete="off" autofocus type="email" id="email" name="email" value="{{ email }}">
         <button type="submit">Submit</button>
         {% if errors %}
             <ul class="error">
