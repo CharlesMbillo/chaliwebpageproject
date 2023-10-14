@@ -4,5 +4,18 @@
 			"path": "../.."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+		"liveServer.settings.CustomBrowser": "firefox",
+		"liveServer.settings.donotShowInfoMsg": true,
+		"markdown.preview.linkify": true,
+		"liveServer.settings.NoBrowser": true,
+		"liveServer.settings.useWebExt": true,
+		"liveServer.settings.fullReload": true
+	},
+	"extensions": {
+		"recommendations": [
+			"ritwickdey.liveserver"
+		]
+	}
 }

@@ -21,15 +21,14 @@ Including another URLconf
  #   path("admin/", admin.site.urls),
 #]
 # chaliwebproject/urls.py
-#from django import views
+
 from django.contrib import admin
 from django.urls import include, path
-
-#from chaliwebpage import views
+from django import 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chaliwebpage.urls')),
+    path('generate-pdf/', 'views.generate_pdf,' name='pdf_generate'),
  #   path ('search/', views.search, name='search'),
-    
 ]
