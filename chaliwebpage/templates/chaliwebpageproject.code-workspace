@@ -11,7 +11,11 @@
 		"markdown.preview.linkify": true,
 		"liveServer.settings.NoBrowser": true,
 		"liveServer.settings.useWebExt": true,
-		"liveServer.settings.fullReload": true
+		"liveServer.settings.fullReload": true,
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.autopep8"
+		},
+		"python.formatting.provider": "none"
 	},
 	"extensions": {
 		"recommendations": [

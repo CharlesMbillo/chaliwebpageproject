@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <ul>
+        {% for user_profile in users%}
+            <li>{{user_profile.first_name}} {{user_profile.last_name}} - {{user_profile.email}}</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

@@ -24,11 +24,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
-from django import 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chaliwebpage.urls')),
-    path('generate-pdf/', 'views.generate_pdf,' name='pdf_generate'),
- #   path ('search/', views.search, name='search'),
+    #path('generate-pdf/', 'views.generate_pdf', name='pdf_generate'),
 ]
