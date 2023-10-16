@@ -8,7 +8,7 @@ from .forms import UserProfileForm
 # from django.views.generic.detail import DetailView
 # from easy_pdf.views import PDFTemplateResponseMixin
 @login_required
-def UseProfile(request):
+def UserProfile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST)
         if form.is_valid():
@@ -19,7 +19,7 @@ def UseProfile(request):
     else:
         form = UserProfileForm()
 
-    return render(request, 'user_profile.html', {'form': form})
+    return render(request, 'userprofile.html', {'form': form})
 
 @login_required
 
@@ -31,7 +31,7 @@ def success(request):
     return render(request, 'success.html')
 
 
-def create_pdf(UserProfile):
+def create_pdf():
     """Generates a PDF file for the given user."""
 
     pdf = canvas.Canvas('user_data.pdf')
