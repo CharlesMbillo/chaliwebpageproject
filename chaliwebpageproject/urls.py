@@ -28,5 +28,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('chaliwebpage.urls')),
-    #path('generate-pdf/', 'views.generate_pdf', name='pdf_generate'),
+    #path('userprofile_list/', 'views.create_pdf', name='create_pdf'),
 ]
