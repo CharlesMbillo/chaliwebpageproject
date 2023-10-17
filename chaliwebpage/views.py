@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
-#from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required
 from reportlab.pdfgen import canvas
 #from reportlab.lib.pagesizes import letter
 from .forms import UserProfileForm
@@ -8,6 +8,9 @@ from .models import UserProfile
 # from django.views.generic.detail import DetailView
 # from easy_pdf.views import PDFTemplateResponseMixin
 #@login_required
+
+#def some_protected_view(request):
+    
 def UserProfile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST)
@@ -21,7 +24,7 @@ def UserProfile(request):
 
     return render(request, 'userprofile.html', {'form': form})
 
-#@login_required
+@login_required
 
 #def UserProfile_list(request):
  #   UserProfile_list= UserProfile.objects.all()
