@@ -4,3 +4,4 @@ I would like you to create for me a web page in django and MySQL database that c
 It should have validation that the email is an actual email address, 
 so you cant put something like abcd on the email field, and on the phone number as well. 
 Add a reverse function to the user profile form...
+Add Django authentication and authorisation 
